@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Rich Day and Night</title>
+    <link>https://richdayandnight.github.io/tags/python/</link>
+    <description>Recent content in Python on Rich Day and Night</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 17 Jun 2018 16:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://richdayandnight.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Simple Tutorial on How to Document your Python Project using Sphinx and Rinohtype</title>
+      <link>https://richdayandnight.github.io/posts/2018/06/a-simple-tutorial-on-how-to-document-your-python-project-using-sphinx-and-rinohtype/</link>
+      <pubDate>Sun, 17 Jun 2018 16:00:00 +0000</pubDate>
+      
+      <guid>https://richdayandnight.github.io/posts/2018/06/a-simple-tutorial-on-how-to-document-your-python-project-using-sphinx-and-rinohtype/</guid>
+      <description>Documenting code is one of the tasks I really don’t want to do, but I’ll do it for the grades anyway.
+ This is probably what you’ll hear from me when I was a first year computer science student. I found documenting code boring and useless as I already know what my code does and the only person who’ll probably read it is the professor checking it.
+I didn’t understand its importance until one day, I needed to look at that undocumented code I wrote years ago for reference and instead of just skimming through it, I spent a lot of time being quite confused about how I structured the project and even how to run it.</description>
+    </item>
+    
+  </channel>
+</rss>

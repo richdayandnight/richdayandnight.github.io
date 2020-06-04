@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="map[name:Rich Yap]">
+<meta name="description"
+    content="Documenting code is one of the tasks I really don’t want to do, but I’ll do it for the grades anyway.
+ This is probably what you’ll hear from me when I was a first year computer science student. I found documenting code boring and useless as I already know what my code does and the only person who’ll probably read it is the professor checking it.
+I didn’t understand its importance until one day, I needed to look at that undocumented code I wrote years ago for reference and instead of just skimming through it, I spent a lot of time being quite confused about how I structured the project and even how to run it." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://richdayandnight.github.io/posts/2018/06/a-simple-tutorial-on-how-to-document-your-python-project-using-sphinx-and-rinohtype/" />
+
+
+<title>
+    
+    A Simple Tutorial on How to Document your Python Project using Sphinx and Rinohtype :: Rich Day and Night 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://richdayandnight.github.io/main.min.b83f62279c65b3bf0c0ccda37a3b4e0c4fd96bd379b1c1542405b4090523d991.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://richdayandnight.github.io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://richdayandnight.github.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://richdayandnight.github.io/favicon-16x16.png">
+<link rel="manifest" href="https://richdayandnight.github.io/site.webmanifest">
+<link rel="mask-icon" href="https://richdayandnight.github.io/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="https://richdayandnight.github.io/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="A Simple Tutorial on How to Document your Python Project using Sphinx and Rinohtype">
+<meta itemprop="description" content="Documenting code is one of the tasks I really don’t want to do, but I’ll do it for the grades anyway.
+ This is probably what you’ll hear from me when I was a first year computer science student. I found documenting code boring and useless as I already know what my code does and the only person who’ll probably read it is the professor checking it.
+I didn’t understand its importance until one day, I needed to look at that undocumented code I wrote years ago for reference and instead of just skimming through it, I spent a lot of time being quite confused about how I structured the project and even how to run it.">
+
+
+<meta itemprop="datePublished" content="2018-06-17T16:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-06-17T16:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="715">
+
+
+
+<meta itemprop="keywords" content="Python,Sphinx," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://richdayandnight.github.io/"/>
+
+<meta name="twitter:title" content="A Simple Tutorial on How to Document your Python Project using Sphinx and Rinohtype"/>
+<meta name="twitter:description" content="Documenting code is one of the tasks I really don’t want to do, but I’ll do it for the grades anyway.
+ This is probably what you’ll hear from me when I was a first year computer science student. I found documenting code boring and useless as I already know what my code does and the only person who’ll probably read it is the professor checking it.
+I didn’t understand its importance until one day, I needed to look at that undocumented code I wrote years ago for reference and instead of just skimming through it, I spent a lot of time being quite confused about how I structured the project and even how to run it."/>
+
+
+
+
+<meta property="article:published_time" content="2018-06-17 16:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://richdayandnight.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+        	
+            <span class="logo__text">rich@day-and-night$</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://richdayandnight.github.io/about/">About</a></li><li><a href="https://richdayandnight.github.io/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    
+    <main class="post">
+        
+
+        <div class="post-info">
+            
+
+            
+
+            </p>
+        </div>
+
+
+        <article>
+            <h1 class="post-title"><a href="https://richdayandnight.github.io/posts/2018/06/a-simple-tutorial-on-how-to-document-your-python-project-using-sphinx-and-rinohtype/">A Simple Tutorial on How to Document your Python Project using Sphinx and Rinohtype</a></h1>
+            
+
+            <div class="post-info">
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>4 minutes
+                
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>Jun 17, 2018</p>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://richdayandnight.github.io/tags/python">Python</a></span><span class="tag"><a href="https://richdayandnight.github.io/tags/sphinx">Sphinx</a></span>
+                </p>
+
+            
+            </div>
+
+
+            <div class="post-content">
+                
+
+<blockquote>
+<p>Documenting code is one of the tasks I really don’t want to do, but I’ll do it for the grades anyway.</p>
+</blockquote>
+
+<p>This is probably what you’ll hear from me when I was a first year computer science student. I found documenting code boring and useless as I already know what my code does and the only person who’ll probably read it is the professor checking it.</p>
+
+<p>I didn’t understand its importance until one day, I needed to look at that undocumented code I wrote years ago for reference and instead of just skimming through it, I spent a lot of time being quite confused about how I structured the project and even how to run it.</p>
+
+<p>Today, there are a lot of tools available to help us in documenting code. Recently, I learned of tools that make it easy to create intelligent and beautiful documentation. Two of those are Sphinx and Rinohtype.</p>
+
+<p>Sphinx, written by Georg Brandl and licensed under the BSD license, was originally created for <a href="https://docs.python.org/" target="_blank">the Python documentation</a> and it has excellent facilities for the documentation of software projects in a range of languages (Sphinx-doc.org, 2018).</p>
+
+<p>Rinohtype, paired with Sphinx offers a modern alternative to <a href="http://en.wikipedia.org/wiki/LaTeX" target="_blank">LaTeX</a> . It provides a Sphinx backend that allows generating professionally typeset PDF documents (Machiels).</p>
+
+<h3 id="in-this-tutorial-i-ll-be-using-sphinx-and-rinohtype-to-produce-an-html-and-pdf-documentation-files-respectively-to-a-simple-api-project-i-wrote-that-manages-a-list-of-teacher-records">In this tutorial, I’ll be using Sphinx and Rinohtype to produce an HTML and PDF documentation files respectively to a simple API project I wrote that manages a list of Teacher records.</h3>
+
+<h4 id="github-project-link-https-github-com-richdayandnight-tutorial-simpleteacherapi"><a href="https://github.com/richdayandnight/Tutorial_SimpleTeacherAPI" target="_blank">Github Project Link</a></h4>
+
+<ol>
+<li>Clone the project and delete/move the docs folder so you may follow me in creating the new documentation.</li>
+<li>Go to the root directory of the project.</li>
+
+<li><p>Create and activate a Python 3 virtual environment</p>
+
+<p>virtualenv -p python3 <name of virtualenv>
+   source <name of virtualenv>/bin/activate</p></li>
+</ol>
+
+<p>
+    <figure class="center" >
+        <img src="https://cdn-images-1.medium.com/max/2000/1*G__9z51DfI7pqHnm9rFWBA.png"  alt="virtual environment"   />
+
+        
+            <figcaption class="center" >Here I named my virtual environment ‘venv’</figcaption>
+        
+    </figure>
+
+
+4. Install all the project requirements</p>
+
+<pre><code>   pip install -r requirements.txt
+</code></pre>
+
+<p>Note: Sphinx and Rinohtype are already inside the requirements.txt file. If you wish to install them in the virtual environment of the project you’re working on use the following commands below.</p>
+
+<pre><code>   pip install Sphinx
+   pip install rinohtype
+</code></pre>
+
+<ol>
+<li><p>Create a docs directory and <strong>cd</strong> into this directory.</p>
+
+<p>mkdir docs
+   cd docs</p></li>
+
+<li><p>Setup Sphinx</p>
+
+<p>sphinx-quickstart</p></li>
+</ol>
+
+
+    <figure class="center" >
+        <img src="https://cdn-images-1.medium.com/max/2000/1*3GeKx7mfbRMkEatvUjL-Yw.png"  alt="Follow this configuration"   />
+
+        
+            <figcaption class="center" >Follow this configuration for now. You may reconfigure this later on your own.</figcaption>
+        
+    </figure>
+
+
+
+<p>
+    <figure class="center" >
+        <img src="https://cdn-images-1.medium.com/max/2000/1*hJU9QaPV1ColEG9SIc98Yg.png"  alt="continuation"   />
+
+        
+            <figcaption class="center" >continuation of the previous picture</figcaption>
+        
+    </figure>
+
+
+7. Open source/conf.py
+   * Configure path to root directory</p>
+
+
+    <figure class="center" >
+        <img src="https://cdn-images-1.medium.com/max/2000/1*toYP5LpVVDBGwm8Q2Rt2GQ.png"  alt="Uncomment lines 15–17"   />
+
+        
+            <figcaption class="center" >Uncomment lines 15–17</figcaption>
+        
+    </figure>
+
+
+
+
+    <figure class="center" >
+        <img src="https://cdn-images-1.medium.com/max/2000/1*SZYb2_6_GEkhNjYJer_qkg.png"  alt="Change path to"   />
+
+        
+            <figcaption class="center" >Change path to ‘../..’ and Add sys.setrecursionlimit(1500)</figcaption>
+        
+    </figure>
+
+
+
+<p>The path should point to the root directory of the project and looking at the project structure, from conf.py we should reach the root by going up two parent directories.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*OlJexT1WRuXWltzXRfy1Ug.png" alt="Project structure" /><em>Project structure</em>
+   * Add Rinohtype to the list of extension</p>
+
+<pre><code> 'rinoh.frontend.sphinx'
+</code></pre>
+
+<ul>
+<li>Uncomment the latex elements</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*fApTWXZJphDDoqbRMPbB7A.png" alt="uncomment these" /><em>uncomment these</em></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*i4PY7uooztxvKmZLSv_baQ.png" alt="You can change the format further, these are just the default." /><em>You can change the format further, these are just the default.</em>
+8. Open the <a href="https://github.com/richdayandnight/Tutorial_SimpleTeacherAPI/blob/master/docs/source/index.rst" target="_blank">index.rst</a> and change the content to the following. (Click the index.rst link for full content)</p>
+
+<pre><code>   &lt;pre&gt;
+   &lt;code&gt;&amp;nbsp;
+   Documentation for the Code  
+   \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*  
+   .. toctree::  
+        :maxdepth: 2  
+        :caption: Contents:  
+
+   TeacherAPI main  
+   ===================  
+   .. automodule:: app  
+    :members:  
+
+   TeacherAPI controller  
+   ===================  
+   .. automodule:: teacherAPI.controller   
+    :members:  
+
+   TeacherAPI models  
+   ===================  
+   .. automodule:: teacherAPI.models   
+    :members:  
+
+   TeacherAPI database  
+   ===================  
+   .. automodule:: teacherAPI.database   
+    :members:  
+
+   TeacherAPI populate  
+   ===================  
+   .. automodule:: teacherAPI.populate   
+    :members:
+    &lt;/code&gt;
+    &lt;/pre&gt;
+</code></pre>
+
+<ol>
+<li>Create the HTML and PDF documentation files.</li>
+</ol>
+
+<ul>
+<li><p>Still inside the docs directory run</p>
+
+<p>make html
+  sphinx-build -b rinoh source _build/rinoh</p></li>
+</ul>
+
+<p>EDIT NOTE [March 16, 2019]: Building the pdf file would fail if your Python version is ≥3.7.0 (<a href="https://github.com/brechtm/rinohtype/issues/133" target="_blank">Github issue reference</a>)</p>
+
+<p><strong><em>The first line would produce the HTML file in docs/build/html/index.html</em></strong></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2082/1*MbbTf-xJw7-vp476DuNP1w.png" alt="View of index.html" /><em>View of index.html</em></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2078/1*K2SXOVXrzrraG2YveCGd9A.png" alt="View of index.html" /><em>View of index.html</em></p>
+
+<p><strong>_The second line would produce the PDF file in docs/<em>build/rinoh/SimpleTeacherDataAPI.pdf</em></strong></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*d1ZaYtu8NrOzRkTqFjwwoA.png" alt="Title page of the documentation" /><em>Title page of the documentation</em></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*6dhDi7thA5VwQC2STdMNgQ.png" alt="Table of contents" /><em>Table of contents</em></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*p048sQvD_IK9il7se02VWQ.png" alt="Sample page of the documentation" /><em>Sample page of the documentation</em></p>
+
+<p>After experiencing being in team projects, I began developing appreciation in documenting code and even though, I wouldn’t say it’s the most enjoying task, it’s definitely reliable and should be practiced by programmers &lt;<em>Looking at you self</em>&gt;.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*aKxfrwQhexd9gsYWiBHFJw.jpeg" alt="" /></p>
+
+<p>To learn more about Sphinx:</p>
+
+<ul>
+<li><a href="http://www.sphinx-doc.org/en/master/" target="_blank">Overview — Sphinx 1.8.0+ documentation</a></li>
+</ul>
+
+<p>Other useful tutorials:</p>
+
+<ul>
+<li><a href="https://pythonhosted.org/an_example_pypi_project/sphinx.html" target="_blank">Documenting Your Project Using Sphinx</a> — This helped me in understanding how to document my code using Python docstrings.</li>
+<li><a href="https://media.readthedocs.org/pdf/brandons-sphinx-tutorial/latest/brandons-sphinx-tutorial.pdf" target="_blank">Brandon’s Sphinx Tutorial</a> — Extensive tutorial on using Sphinx</li>
+</ul>
+
+<p>Machiels, Brecht. “Rinohtype: The Python Document Processor — Rinohtype 0.3.1.Dev0 Documentation.” <em>Rinohtype.readthedocs.io</em>. N.p., 2016. Web. 17 June 2018.</p>
+
+<p>Sphinx-doc.org. (2018). <em>Overview — Sphinx 1.8.0+ documentation</em>. [online] Available at: <a href="http://www.sphinx-doc.org/en/master/" target="_blank">http://www.sphinx-doc.org/en/master/</a> [Accessed 17 Jun. 2018].</p>
+
+<hr />
+
+<p>This article is cross-posted @ <a href="https://medium.com/@richdayandnight/a-simple-tutorial-on-how-to-document-your-python-project-using-sphinx-and-rinohtype-177c22a15b5b" target="_blank">Medium</a></p>
+
+            </div>
+        </article>
+
+
+
+        
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h"></span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://richdayandnight.github.io/posts/2019/09/my-awesome-experience-of-attending-camps-with-strangers/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">My Awesome Experience of Attending Camps with Strangers</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://richdayandnight.github.io/">Rich Yap</a></span>
+            
+            <span> <a href="https://richdayandnight.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://richdayandnight.github.io/bundle.min.4c3fb12a087ceed4a52cb5d57068a9795c7069617a01ca70f788052ad66e1791779e6c72686e1dc0ca13dc03b0203204b6566bb0dd1ee80de2b7ff4d8fe53db2.js" integrity="sha512-TD&#43;xKgh87tSlLLXVcGipeVxwaWF6Acpw94gFKtZuF5F3nmxyaG4dwMoT3AOwIDIEtlZrsN0e6A3it/9Nj&#43;U9sg=="></script>
+
+
+
+    </body>
+</html>

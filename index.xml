@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rich Day and Night</title>
+    <link>https://richdayandnight.github.io/</link>
+    <description>Recent content on Rich Day and Night</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 17 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://richdayandnight.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://richdayandnight.github.io/about/</link>
+      <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://richdayandnight.github.io/about/</guid>
+      <description>Hi 🌻 I’m Rich.
+I recently graduated with a degree in Computer Science at the University of the Philippines Diliman. 🌻</description>
+    </item>
+    
+    <item>
+      <title>My Awesome Experience of Attending Camps with Strangers</title>
+      <link>https://richdayandnight.github.io/posts/2019/09/my-awesome-experience-of-attending-camps-with-strangers/</link>
+      <pubDate>Sun, 29 Sep 2019 16:00:00 +0000</pubDate>
+      
+      <guid>https://richdayandnight.github.io/posts/2019/09/my-awesome-experience-of-attending-camps-with-strangers/</guid>
+      <description>For the past year, I have attended four camps that are held for a week or less, collaborated with people of whom I had zero interaction with before the camp itself, and learned some awesome things.
+The camps I attended are: 1.) Zühlke Innovation Academy, 2.) KAIST EE Camp 2018, 3.) KAIST SoC Camp 2019, and 4.) Accenture Student Leadership Conference 2019 (More details on the camps at the end of the article)  In applying to the camps: Trying doesn’t hurt as much as you’d imagine it would.</description>
+    </item>
+    
+    <item>
+      <title>A Simple Tutorial on How to Document your Python Project using Sphinx and Rinohtype</title>
+      <link>https://richdayandnight.github.io/posts/2018/06/a-simple-tutorial-on-how-to-document-your-python-project-using-sphinx-and-rinohtype/</link>
+      <pubDate>Sun, 17 Jun 2018 16:00:00 +0000</pubDate>
+      
+      <guid>https://richdayandnight.github.io/posts/2018/06/a-simple-tutorial-on-how-to-document-your-python-project-using-sphinx-and-rinohtype/</guid>
+      <description>Documenting code is one of the tasks I really don’t want to do, but I’ll do it for the grades anyway.
+ This is probably what you’ll hear from me when I was a first year computer science student. I found documenting code boring and useless as I already know what my code does and the only person who’ll probably read it is the professor checking it.
+I didn’t understand its importance until one day, I needed to look at that undocumented code I wrote years ago for reference and instead of just skimming through it, I spent a lot of time being quite confused about how I structured the project and even how to run it.</description>
+    </item>
+    
+  </channel>
+</rss>
